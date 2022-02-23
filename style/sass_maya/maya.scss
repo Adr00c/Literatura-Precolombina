@@ -1,0 +1,297 @@
+$head: url("../../img/card-mayas.jpg");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow: hidden;
+}
+
+.head {
+  background-image: $head;
+  filter: grayscale(80%);
+  width: auto;
+  height: 95vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+
+.title {
+  font-size: 5em;
+  color: rgb(255, 255, 255);
+}
+
+.contenido {
+  margin: 2em;
+  flex-direction: row;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
+h6 {
+  line-height: 1.6;
+  padding-bottom: 0.3em;
+}
+
+p {
+  font-size: 1.1em;
+  font-weight: 300;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.wrapper {
+  width: 99vw;
+}
+
+section {
+  position: relative;
+  height: 100%;
+}
+
+section.split-view {
+  display: flex;
+  flex-direction: row;
+}
+
+.left,
+.right {
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  width: 50vw;
+}
+
+.left {
+  top: 0;
+  left: 0;
+  background-image: url(../../img/card-mayas.jpg);
+}
+
+.right {
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: columns;
+  align-items: center;
+  padding-left: 10%;
+  padding-right: 2%;
+}
+
+.box {
+  z-index: 2;
+  width: 200px;
+  height: 200px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 160%;
+  color: #fff;
+  position: absolute;
+  top: 60vh;
+  left: 20%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.horizontal {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.control {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1vw;
+}
+
+.control-next,
+.control-prev {
+  background: white;
+  padding: 1em 1em;
+  cursor: pointer;
+}
+
+.slide {
+  z-index: 1;
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-wrap: no-wrap;
+  width: 90vw;
+  height: 100vh;
+  transform: translate(-85vw);
+}
+
+.slide-left {
+  transform: translateX(-170vw);
+  transition: 0.4s ease-out;
+}
+
+.slide:first-of-type {
+  background-image: url(../../img/patron-maya.jpg);
+}
+
+.slide:nth-of-type(2) {
+  background: rgb(143, 87, 87);
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.slide:nth-of-type(3) {
+  background: rgb(250, 100, 100);
+}
+
+.collage-twoimg {
+  padding: 5vh 5vw;
+  min-height: calc(550px + 30vh);
+}
+
+.collage-img {
+  position: absolute;
+}
+
+.collage-img:first-of-type {
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20%;
+  width: 450px;
+  height: 600px;
+  background-image: url(../../img/imagen-maya1.jpg);
+  background-size: cover;
+  background-position: right;
+}
+
+.collage-img:nth-of-type(2) {
+  z-index: 2;
+  top: calc(50% + 100px);
+  left: calc(20% + 300px);
+  width: 225px;
+  height: 300px;
+  background-image: url(../../img/imagen-maya2.jpg);
+  background-size: contain;
+  background-position: right;
+}
+
+.collage-text {
+  z-index: 3;
+  position: absolute;
+  right: 3vw;
+  bottom: 10vh;
+  font-size: 0.9em;
+  max-width: 300px;
+  min-width: 300px;
+  color: grey;
+  padding-top: 0.3em;
+}
+
+.single {
+  padding: 5vh 5vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.single-img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.single-img {
+  width: 800px;
+  height: 640px;
+  background: #ff8330;
+}
+
+.single-text {
+  align-self: flex-end;
+  font-size: 0.9em;
+  color: grey;
+  padding-top: 0.3em;
+}
+
+.final {
+  padding: 5vh 5vw 5vh 5vw;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.final p {
+  position: relative;
+  max-width: 520px;
+  text-align: left;
+  font-size: 1.2em;
+  line-height: 1.4;
+  padding-bottom: 1.2em;
+}
+
+.final p:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translateX(-75%);
+  width: 60px;
+  height: 1px;
+  background: black;
+}
+
+.collage-twoimg-2 {
+  padding: 5vh 5vw;
+  min-height: calc(550px + 30vh);
+}
+
+.collage-img-2 {
+  position: absolute;
+}
+
+.collage-img-2:first-of-type {
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20%;
+  width: 450px;
+  height: 600px;
+  background-image: url(../../img/imagen-maya3.jpeg);
+  background-size: cover;
+  background-position: right;
+}
+
+.collage-img-2:nth-of-type(2) {
+  z-index: 2;
+  top: calc(50% + 100px);
+  left: calc(20% + 300px);
+  width: 225px;
+  height: 300px;
+  background-image: url(../../img/imagen-maya4.jpeg);
+  background-size: contain;
+  background-position: right;
+}
